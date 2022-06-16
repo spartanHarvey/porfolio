@@ -1,25 +1,24 @@
 import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
-import {Stack, Typography, Paper } from "@mui/material";
+import { Stack, Typography, Paper } from "@mui/material";
 import Alert from "@mui/material/Alert";
 import Snackbar from "@mui/material/Snackbar";
 import emailjs from "@emailjs/browser";
-import { Container, Button} from "react-bootstrap";
+import { Container, Button, Form } from "react-bootstrap";
 
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const ContactForm = () => {
-
   const theme = createTheme({
     palette: {
       primary: {
         // Purple and green play nicely together.
-        main: '#69306d',
+        main: "#69306d",
       },
       secondary: {
         // This is green.A700 as hex.
-        main: '#11cb5f',
+        main: "#11cb5f",
       },
     },
   });
@@ -41,7 +40,7 @@ const ContactForm = () => {
     last_name: "",
     message: "",
     reply_to: "",
-    phone_number:""
+    phone_number: "",
   });
 
   const onSubmit = (e) => {
@@ -66,7 +65,7 @@ const ContactForm = () => {
             last_name: "",
             message: "",
             reply_to: "",
-            phone_number:""
+            phone_number: "",
           });
           setOpen(true);
           setAlert({ type: "success", message: "Email sent successfully!" });
@@ -98,16 +97,20 @@ const ContactForm = () => {
     if (toSend.reply_to === "") {
       setEmailError({ error: true, text: "This field is required!" });
       readyToSubmit = false;
-    }
-    else if (!/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]+$/.test(toSend.reply_to)) {
+    } else if (
+      !/^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]+$/.test(toSend.reply_to)
+    ) {
       setEmailError({ error: true, text: "Invalid email" });
       readyToSubmit = false;
     }
-    if  (toSend.phone_number === ""){
+    if (toSend.phone_number === "") {
       setPhoneNumberError({ error: true, text: "This field is required!" });
       readyToSubmit = false;
-    }
-    else if (!/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/.test(toSend.phone_number)){
+    } else if (
+      !/^(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}$/.test(
+        toSend.phone_number
+      )
+    ) {
       setPhoneNumberError({ error: true, text: "Invalid Phone Number" });
       readyToSubmit = false;
     }
@@ -120,11 +123,59 @@ const ContactForm = () => {
   };
 
   return (
-    <Container>
+    <section className="">
+
+
+    <Container className="col-lg-6 col-xs-12 min-w-sm-5 p-5 ">
+     {/* <Form className="d-flex flex-column justify-content-center  col-6">
+        <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
+          <Form.Label>First Name</Form.Label>
+          <Form.Control type="text" placeholder="ex. John"  />
+         
+        </Form.Group>
+         <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Last Name</Form.Label>
+          <Form.Control type="email" placeholder="ex. Doe" />
+          
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Email</Form.Label>
+          <Form.Control type="email" placeholder="example@email.com" />
+         
+        </Form.Group>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Phone</Form.Label>
+          <Form.Control type="email" placeholder="ex. (111) 111-1111" />
+         
+        </Form.Group>
+        <Form.Group className="mb-3 " controlId="formBasicEmail">
+          <Form.Label>Message</Form.Label>
+          <Form.Control type="email" placeholder="Enter email" />
+          
+        </Form.Group> 
+
+
+        <Button className="col-3 mx-auto mt-3" variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>*/}
       <form onSubmit={onSubmit}>
-        <Box className='sec'>
-          <Paper sx={{ padding: 10, marginTop: 10, marginBottom: 10 }} elevation={12}>
-            <Typography sx={{ textAlign: 'center', fontSize: '3em', marginBottom: 3, fontFamily: 'Montserrat' }}>Contact Me</Typography>
+        <Box className="sec ">
+          <Paper
+         
+            sx={{ padding: 10, marginTop: 10, marginBottom: 10 }}
+            elevation={0}
+          >
+            <Typography
+              sx={{
+                textAlign: "center",
+                fontSize: "3em",
+                marginBottom: 3,
+                fontFamily: "Montserrat",
+              }}
+            >
+              Contact Me
+            </Typography>
             <Stack spacing={4}>
               <TextField
                 error={firstNameError.error}
@@ -156,7 +207,7 @@ const ContactForm = () => {
                 label="Email"
                 variant="standard"
               ></TextField>
-               <TextField
+              <TextField
                 error={phoneNumberError.error}
                 id="outlined-error-helper-text"
                 helperText={phoneNumberError.text}
@@ -177,13 +228,20 @@ const ContactForm = () => {
                 variant="standard"
                 multiline
               ></TextField>
-
-
             </Stack>
 
-            <Box sx={{ display: 'flex', justifyContent: 'center', width: '100%', marginTop: 6 }}>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                width: "100%",
+                marginTop: 6,
+              }}
+            >
               <ThemeProvider theme={theme}>
-                <Button className="mx-3 btn btn-lg" type="submit">Submit</Button>
+                <Button className="mx-3 btn btn-lg" type="submit">
+                  Submit
+                </Button>
               </ThemeProvider>
             </Box>
           </Paper>
@@ -207,6 +265,7 @@ const ContactForm = () => {
         </Alert>
       </Snackbar>
     </Container>
+    </section>
   );
 };
 

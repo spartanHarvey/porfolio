@@ -5,6 +5,7 @@ import Experience from './components/Experience';
 import ContactForm from './components/Contact';
 import Project from './components/Project';
 import Education from './components/Education';
+import Footer from './components/Footer';
 function App() {
   return (
     <div className="App">
@@ -13,7 +14,9 @@ function App() {
     <Experience />
     <Project/>
     <Education/>
-    <ContactForm/>
+    
+    <ContactForm className="bg-dark"/>
+    <Footer/>
     </div>
   );
 }
