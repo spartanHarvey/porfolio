@@ -1,8 +1,9 @@
 import React from "react";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
+import Jorge_Ngimbi_0 from "../Jorge_Ngimbi_0.pdf"
 function About() {
   return (
-    <Container className="min-vh-100 mx-auto my-5">
+    <Container id="about" className="min-vh-100 mx-auto my-5">
       <Row className="d-flex justify-content-start align-items-center">
         <Col
           className="d-flex justify-content-center align-items-center"
@@ -22,7 +23,7 @@ function About() {
         <Col className="mx-auto my-5" lg={6} sm={7} xs={7}>
           <Row className="d-flex justify-content-center ">
             <Col className="col-lg-12">
-              <h1 className="text-nowrap">Hi, I'm Jorge</h1>
+              <h1 className="text-nowrap">Hi, <span className="text-primary">I'm Jorge</span></h1>
               <p>
                 Skilled software engineer professional with startup
                 environment experience and a computer science degree. Passionate
@@ -54,9 +55,14 @@ function About() {
             <Button className="col-sm-4 mx-auto mb-3 mb-sm-0 text-nowrap">
               Contact me
             </Button>
+           
             <Button
-              className="col-sm-auto mx-auto text-nowrap"
+              className="col-sm-auto mx-auto text-nowrap "
               variant="outline-primary"
+              // download="Jorge_Ngimbi_resume"
+              without 
+              href={Jorge_Ngimbi_0} target="_blank" rel="noopener noreferrer"
+              
             >
               download resume
             </Button>

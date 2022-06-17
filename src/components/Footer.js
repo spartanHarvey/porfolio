@@ -12,9 +12,9 @@ function Footer() {
         </div>
         <div className=''>
 
-        <a href="https://www.instagram.com/gnathan_9" ><Instagram className='' size={50}/></a>
-        <a href="https://www.linkedin.com/in/jorgengimbi" ><Linkedin className='mx-5 sm-p-5' size={50}/></a>
-        <a href="https://www.github.com/spartanharvey" ><Github className='' size={50}/></a>
+        <a className='m' href="https://www.instagram.com/gnathan_9" ><Instagram size={50}/></a>
+        <a className='m mx-5 sm-p-5' href="https://www.linkedin.com/in/jorgengimbi" ><Linkedin size={50}/></a>
+        <a className='m' href="https://www.github.com/spartanharvey" ><Github  size={50}/></a>
         </div>
 
         </Container>

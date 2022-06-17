@@ -13,7 +13,7 @@ function App() {
     <About />
     <Experience />
     <Project/>
-    <Education/>
+    <Education />
     
     <ContactForm className="bg-dark"/>
     <Footer/>

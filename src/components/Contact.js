@@ -126,7 +126,7 @@ const ContactForm = () => {
     <section className="">
 
 
-    <Container className="col-lg-6 col-xs-12 min-w-sm-5 p-5 ">
+    <Container id="contact" className="col-lg-6 col-xs-12 min-w-sm-5 p-5 ">
      {/* <Form className="d-flex flex-column justify-content-center  col-6">
         <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
           <Form.Label>First Name</Form.Label>

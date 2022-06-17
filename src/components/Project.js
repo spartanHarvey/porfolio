@@ -4,12 +4,15 @@ import {previousProjects as projects} from '../work'
 
 function Project() {
   return (
-    <Container className="min-vh-100 mx-auto my-5 bg-light bg-gradient">
+    <section className=''>
+
+    
+    <Container id="projects" className="min-vh-80 mx-auto pb-5">
   {/* <Row>
     <Col className='bg-primary'>1 of 2</Col>
     <Col>2 of 2</Col>
   </Row> */}
-   <Row  className='mx-auto'>
+   <Row  className='mx-auto pt-md-5'>
             
             <h1  className='d-flex  justify-content-center align-items-center'> PROJECTS</h1>
            
@@ -19,7 +22,7 @@ function Project() {
         
 
        </Row>
-  <Row>
+  <Row className='mx-auto pt-5'>
     {/* <Col>1 of 3</Col>
     <Col className='bg-primary'>2 of 3</Col>
     <Col>3 of 3</Col> */}
@@ -28,13 +31,14 @@ function Project() {
 
            return <>
            
-           <CardGroup className="col-4">
+           <CardGroup className="col-lg-4 col-md-6 col-sm-12 g-sm-3">
             <Card>
-                <Card.Img  width={100}
-            height={250} variant="top" src={project.icon} />
+              <a href={project.site} ><Card.Img  width={100}
+            height={250} variant="top" src={project.icon} /></a>
+                
                 <Card.Body>
-                <Card.Title>{project.title}</Card.Title>
-                <Card.Subtitle>{project.description}</Card.Subtitle>
+                <Card.Title className="pb-2">{project.title}</Card.Title>
+                <Card.Subtitle className="pb-2">{project.description}</Card.Subtitle>
                 <Card.Text>
                    {project.techStach}
                 </Card.Text>
@@ -80,6 +84,7 @@ function Project() {
 
   </Row>
 </Container>
+</section>
   )
 }
 

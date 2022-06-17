@@ -6,7 +6,8 @@ import {VerticalTimeline, VerticalTimelineElement} from 'react-vertical-timeline
 import 'react-vertical-timeline-component/style.min.css'
 function Education() {
   return (
-    <Container className="bg-light bg-gradient">
+    <section className="bg-light bg-gradient">
+    <Container id="education" className=" pt-5" >
     <Row  className='mx-auto'>
         
         <h1  className='d-flex  justify-content-center align-items-center'> Education</h1>
@@ -51,6 +52,7 @@ function Education() {
     </VerticalTimeline>
     </Row>
  </Container>
+ </section>
   )
 }
 

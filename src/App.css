@@ -1,4 +1,6 @@
-a:visited {color:black;}
-a:hover{
-    color:black;
+.m{color:gray;}
+.m:visited{color:gray;}
+.m:hover{
+    color:gray;
+    
 }
