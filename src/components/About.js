@@ -6,11 +6,12 @@ function About() {
     <Container id="about" className="min-vh-100 mx-auto my-5">
       <Row className="d-flex justify-content-start align-items-center">
         <Col
-          className="d-flex justify-content-center align-items-center"
-          sm={12}
-          md={12}
-          lg={5}
-          xs={10}
+          className="mx-auto "
+          
+          sm={8}
+          md={9}
+          lg={6}
+          
         >
           <Image
             src="profile.jpeg"
@@ -22,9 +23,9 @@ function About() {
         </Col>
         <Col className="mx-auto my-5" lg={6} sm={7} xs={7}>
           <Row className="d-flex justify-content-center ">
-            <Col className="col-lg-12">
-              <h1 className="text-nowrap">Hi, <span className="text-primary">I'm Jorge</span></h1>
-              <p>
+            <Col className="col-lg-12 col-md-12">
+              <h1 className="text-nowrap">Hi, <span className="text-primary text-left">I'm Jorge</span></h1>
+              <p >
                 Skilled software engineer professional with startup
                 environment experience and a computer science degree. Passionate
                 about FinTech and Innovation. Highly skilled in JavaScript, and
@@ -50,14 +51,14 @@ function About() {
               </p>
             </Col>
           </Row>
-          <Row className="d-flex flex-row mx-auto my-2 ">
-            {/* <Col className="d-flex justify-content-start  align-items-center"></Col> */}
-            <Button className="col-sm-4 mx-auto mb-3 mb-sm-0 text-nowrap">
+          <Row className="d-grid d-lg-flex lg-justify-content-between my-2 gap-3">
+            {/* <Col className="d-flex   align-items-center"></Col> */}
+            <Button className="col-lg-5  col-sm-8 mx-auto mb-3 mb-sm-0 text-nowrap p-3 rounded-pill">
               Contact me
             </Button>
            
             <Button
-              className="col-sm-auto mx-auto text-nowrap "
+              className="col-lg-5 col-sm-8 mx-auto text-nowrap p-3 rounded-pill"
               variant="outline-primary"
               // download="Jorge_Ngimbi_resume"
               without 

@@ -239,7 +239,7 @@ const ContactForm = () => {
               }}
             >
               <ThemeProvider theme={theme}>
-                <Button className="mx-3 btn btn-lg" type="submit">
+                <Button className="mx-3 btn btn-lg rounded-pill" type="submit">
                   Submit
                 </Button>
               </ThemeProvider>
