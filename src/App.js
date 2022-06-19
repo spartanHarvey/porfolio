@@ -14,8 +14,7 @@ function App() {
     <Experience />
     <Project/>
     <Education />
-    
-    <ContactForm className="bg-dark"/>
+    <ContactForm/>
     <Footer/>
     </div>
   );
