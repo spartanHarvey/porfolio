@@ -55,7 +55,7 @@ function About() {
                 Skilled{" "}
                 <span className="fw-bold text-uppercase">Full-Stack</span>{" "}
                 developer professional with 2 years of experience and a computer
-                science degree. Passionate about FinTech, Machine Machine
+                science degree. Passionate about FinTech, Machine
                 Learning, and Innovation. Highly skilled in JavaScript, and
                 Python. Currently seeking for software engineering opportunities
                 at a promising company looking for a Highly motivated talent.
