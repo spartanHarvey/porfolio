@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col, Image, Button } from "react-bootstrap";
 import Jorge_Ngimbi_resume from "../Jorge_Ngimbi_resume.pdf";
+import jorge_Ngimbi__resume from "../jorge_Ngimbi__resume.pdf";
 function About() {
   return (
     <Container id="about" className="container-fluid  min-vh-100 mx-auto mt-3">
@@ -54,7 +55,7 @@ function About() {
               <p>
                 Skilled{" "}
                 <span className="fw-bold text-uppercase">Full-Stack</span>{" "}
-                developer professional with 2 years of experience and a computer
+                developer professional with 2+ years of experience and a computer
                 science degree. Passionate about FinTech, Machine
                 Learning, and Innovation. Highly skilled in JavaScript, and
                 Python. Currently seeking for software engineering opportunities
@@ -80,7 +81,9 @@ function About() {
           </Row>
           <Row className="d-grid d-lg-flex lg-justify-content-between  gap-3 ">
             <Button
-              href="#contact"
+              // href="https://mail.google.com/mail/u/0/#inbox?compose=new?view=cm&fs=1&to=jorgenathan257@gmail.com"
+              // https://mail.google.com/a/seagate.com/?view=cm&fs=1&to=rosemary.arce@seagate.com
+              href="https://mail.google.com/mail/u/0/?view=cm&to=jorgenathan257@gmail.com"
               className="col-lg-5  col-sm-8 col-12 mx-auto mb-3 mb-sm-0 text-nowrap p-3 rounded-pill"
             >
               Contact me
@@ -91,7 +94,7 @@ function About() {
               variant="outline-primary"
               // download="Jorge_Ngimbi_resume"
               without={"true"}
-              href={Jorge_Ngimbi_resume}
+              href={jorge_Ngimbi__resume}
               target="_blank"
               rel="noopener noreferrer"
             >

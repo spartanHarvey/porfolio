@@ -14,7 +14,7 @@ function App() {
     <Experience />
     <Project/>
     <Education />
-    <ContactForm/>
+    {/* <ContactForm/> */}
     <Footer/>
     </div>
   );
